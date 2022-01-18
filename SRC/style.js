@@ -2,8 +2,5 @@
 
 window.addEventListener("load", ()=>{
 
-
-
-
-    
+    init();
 })
