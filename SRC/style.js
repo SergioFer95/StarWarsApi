@@ -1,24 +1,53 @@
 
 window.onload = () => {
 
-    var usuarios= [];
+    // OPCIÓN 1:
+    // var usuarios= [];
 
-    fetch('https://reqres.in/api/users')
-    .then(data => data.json())
-    .then(users =>{
-        usuarios = users.data;
-    })
+    // fetch('https://reqres.in/api/users?page=2')
+    // .then(data => data.json())
+    // .then(data =>{
+    //     usuarios = data.first_name;
+    // })
 
-    console.log(usuarios);
-
-
-
+    // console.log(usuarios);
 
 
 
+    // OPCIÓN 2:
+    // var usuarios = [];
 
-    // Apartado CREAR UN NUEVO <li>, HECHO:
-    let ourUl = document.querySelector('#pokeListOne');
+    // const apiCall = fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+    // .then(apiCall => apiCall.json())
+    // .then(name =>{
+    //     usuarios = name.ability;
+    // })
+
+    // console.log(usuarios);
+
+
+    
+
+    // OPCIÓN 3:
+    // const getInfo = async ()=>{
+    //     const apiCall = await fetch('https://rickandmortyapi.com/api/character');
+
+    //     const transformToJson = await apiCall.json();
+
+    //     return transformToJson;
+    // }
+
+    // getInfo();
+
+
+
+
+
+
+
+
+    // Crear nuevo <li> dinámico, HECHO:
+    let ourUl = document.querySelector('[customName="pokeList"]');
 
     const createNewLi = () => {
         let createLi = document.createElement("li");
