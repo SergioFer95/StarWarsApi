@@ -10,7 +10,6 @@ window.addEventListener("load", ()=>{
 
         const mappedCharacters = dataTransform.map(character =>({
             photo: character.image,
-            id: character.id,
             name: character.name,
             gender: character.gender,
             species: character.species,
@@ -23,12 +22,12 @@ window.addEventListener("load", ()=>{
     const showCharacters = (charactersMapped) => {
         const HTML = charactersMapped.map((character)=>
             `
-            <div class="characterInfo">
-                <img class="characterPhoto" src=${character.photo} alt=${character.name} width:"400px" height:"500px"/>
-                <h2>${character.id} ${character.name}</h2>
-                <h4>Género: ${character.gender}</h4>
-                <h4>Especie: ${character.species}</h4>
-                <h4>Mundo Natal: ${character.homeworld}</h4>
+            <div class="characterInfo" style="color:#EEEBDD; font-weight:bold; border:5px solid black; border-radius:25px; heigth:600px; text-align:center; width:700px; margin:0 auto; background-color:#630000">
+                <img class="characterPhoto" src=${character.photo} alt=${character.name} style="width:500px; border:3px solid #D8B6A4; border-radius:25px; margin-top:40px"/>
+                <h2>${character.name}</h2>
+                <h3>Gender: ${character.gender}</h4>
+                <h3>Species: ${character.species}</h4>
+                <h3 style="margin-bottom:40px;">Home World: ${character.homeworld}</h4>
             </div>
             `
         )
